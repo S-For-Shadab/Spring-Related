@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context.xsd">
+	<context:annotation-config />
+ 	
+	<bean name="obj" class="com.springcore.autowire.B" p:name="rahul" p:id="21" />
+	
+	
+	<!-- if we go by byName autowiring then the parameter name of class A should match with one of the beans name in spring container -->
+	 <bean name="a" class="com.springcore.autowire.A" autowire="byName" />
+	 
+	 
+	 <!-- if we go by byType then the object type in class A which need to be wired type is searched here and if found type B 
+	 bean then it will inject it -->
+	  <bean name="a1" class="com.springcore.autowire.A" autowire="byType" />
+	  
+	  <!-- if we go by constructor autowiring then it sets value like byName autowiring that is
+	   it will find if the name of the object is present in the class or not -->
+ 	 <bean name="a2" class="com.springcore.autowire.A" autowire="constructor" />
+</beans>
+
+ 
+
+ 

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context=" http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context.xsd">
+
+<!-- Below are the three ways to set properties using the setter of the pojo -->
+
+
+<!-- below is the configuration for setter injection i.e i am using setter() to inject value in an object -->
+	<bean class="com.springcore.Student" name="student1">
+		<property name="studentId">
+			<value>22334</value>
+		</property>
+		<property name="studentName">
+			<value>Shadab khan</value>
+		</property> 
+		<property name="studentAdress">
+			<value>Mumbai maharastra</value>
+		</property> 
+	</bean>
+	
+	<!-- below is the configuration for property injection injection   to inject value in an object -->
+	<bean class="com.springcore.Student" name="student2">
+		<property name="studentId" value="2232" />
+			   
+		<property name="studentName" value="Touhid khan" />
+			 
+		<property name="studentAdress" value="Mumbai maharastra" />
+			 
+	</bean>
+	
+	<!-- below is the configuration for injectionin property with p schema -->
+	<bean class="com.springcore.Student" name="student3" p:studentId="222" p:studentAdress="london" p:studentName="Lawliet" />
+		 
+			 
+	 
+
+</beans>
+
+ 
+
+ 
