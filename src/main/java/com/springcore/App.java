@@ -13,7 +13,7 @@ public class App
     {
     	ApplicationContext context=new ClassPathXmlApplicationContext("com/springcore/config.xml");
     	Student  s1=(Student) context.getBean("student3");
-    	System.out.println(s1.toString());
+    	System.out.println(s1);
         
     }
 }

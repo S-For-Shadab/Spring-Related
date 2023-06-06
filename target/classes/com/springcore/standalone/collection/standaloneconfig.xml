@@ -12,7 +12,7 @@
 		http://www.springframework.org/schema/util
 		http://www.springframework.org/schema/util/spring-util.xsd">
 
-	<!-- standalone list for reusing same lisand giving class to it which we 
+	<!-- standalone list for reusing same list and giving class to it which we 
 		want -->
 	<util:list list-class="java.util.LinkedList" id="list">
 		<value>Aman</value>
